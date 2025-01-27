@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import './App.css';
 
-function App() {
+const App=()=> {
   return (
    <div>
     <Header />
@@ -13,6 +13,6 @@ function App() {
 
    </div>
   );
-}
+};
 
 export default App;

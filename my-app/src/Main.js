@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const initState = {
   books: [
@@ -14,34 +14,39 @@ const initState = {
       author: "ابن القيم",
       isbn: "893847239479",
     },
+    {
+      id: 3,
+      title: "فن الإقناع",
+      author: "هاري ميلز",
+      isbn: "5647382910",
+    },
   ],
 };
 
-class Main extends Component {
-  render() {
-    return (
-      <main>
-        <h2>Available Books</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-          {initState.books.map((book) => (
-            <div
-              key={book.id}
-              style={{
-                border: '1px solid #ccc',
-                borderRadius: '8px',
-                padding: '10px',
-                width: '200px',
-              }}
-            >
-              <h3>{book.title}</h3>
-              <p><strong>Author:</strong> {book.author}</p>
-              <p><strong>ISBN:</strong> {book.isbn}</p>
-            </div>
-          ))}
-        </div>
-      </main>
-    );
-  }
-}
+const Main = () => {
+  return (
+    <main>
+      <h2>Available Books</h2>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+        {initState.books.map((book) => (
+          <div
+            key={book.id}
+            style={{
+              border: '1px solid #ccc',
+              borderRadius: '8px',
+              padding: '10px',
+              width: '200px',
+            }}
+          >
+            <h3>{book.title}</h3>
+            <p><strong>Author:</strong> {book.author}</p>
+            <p><strong>ISBN:</strong> {book.isbn}</p>
+          </div>
+        ))}
+      </div>
+    </main>
+  );
+};
 
 export default Main;
+
